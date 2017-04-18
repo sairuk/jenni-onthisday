@@ -122,7 +122,7 @@ def onthisday(jenni, input):
                 req = urllib2.Request(url, headers={'Accept':'*/*'})
                 req.add_header('User-Agent', user_agent)
                 data = urllib2.urlopen(req).read()
-            except URLError as e:
+            except urllib2.URLError as e:
                 print "ERROR: %s" % e
 
             # find title
